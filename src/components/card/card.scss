@@ -1,0 +1,13 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.cardList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    @include mixins.card;
+    font-family: Arial, Helvetica, sans-serif//variables.$text-font-CEVICHE
+}

@@ -1,0 +1,75 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.header {
+    display: grid;
+    grid-template-columns: 1% 5% 1fr 10% 10% 0.75fr 9% 7% 1%;
+    grid-template-areas: ". logo . soggiorni esperienze . affittaconairbnb altro .";
+    align-items: center;
+    justify-items: center;
+}
+
+.airbnb-logo {
+    grid-area: logo;
+}
+
+.airbnb-logo img {
+    @include mixins.sizeImg($height: 100%, $width: 150%);
+}
+
+.soggiorni {
+    grid-area: soggiorni;
+}
+
+.esperienze {
+    grid-area: esperienze;
+    color: variables.$not-clicked;
+}
+
+.affittaconairbnb {
+    grid-area: affittaconairbnb;
+    display: flex;
+    align-items: center;
+}
+
+.affittaconairbnb img {
+    @include mixins.sizeImg($height: 20px, $width: 20px);
+    margin-left: 10px;
+}
+
+.altra-roba {
+    display: flex;
+    grid-area: altro;
+}
+
+.altra-roba:hover {
+    border: 1px solid;
+    border-radius: 15px;
+    box-shadow: 0px 5px darkgray;
+}
+
+.altra-roba img {
+    @include mixins.sizeImg($height: 50px, $width: 50px);
+}
+
+details {
+    position: relative;
+}
+
+details ul {
+    position: absolute;
+    right: 100%;
+    list-style: none;
+    width: max-content;
+/*     background-color: white; */
+    border-radius: 5px;
+}
+
+details ul li {
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+details summary {
+    list-style: none;
+}

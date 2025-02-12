@@ -1,0 +1,22 @@
+@use '../../styles/mixins';
+
+.external-searchbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.searchbar {
+    display: grid;
+    grid-column-start: 2;
+    grid-template-columns: 30% 20% 20% 25% 5%;
+    gap: 10px;
+    border: groove;
+    border-radius: 50px;
+    padding: 0px 50px;
+}
+
+.searchbar img {
+    @include mixins.sizeImg($height:30px, $width: 30px);
+    justify-self: center;
+    align-self: center;
+}

@@ -1,0 +1,15 @@
+@use './variables';
+@use './mixins';
+
+body {
+    background-color: variables.$background-color;
+    font-family: variables.$text-font-ROBOTO;
+}
+
+.dark-mode {
+    @include mixins.darkMode()
+}
+
+.light-mode {
+    @include mixins.theme()
+}

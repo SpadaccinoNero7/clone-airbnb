@@ -1,0 +1,22 @@
+@mixin sizeImg($height: 10px, $width: 10px) {
+    height: $height;
+    width: $width;
+}
+
+@mixin card($padding: 0px 5%, $border-style: solid, $border-radius: 50px, $min-width: 100px) {
+    padding: $padding;
+    border-style: $border-style;
+    border-radius: $border-radius;
+    min-width: $min-width;
+}
+
+//dark mode e light mode
+
+@mixin theme($background-color: white, $text-color: black) {
+    background-color: $background-color;
+    color: $text-color;
+}
+
+@mixin darkMode() {
+    @include theme($background-color: black, $text-color: white)
+}

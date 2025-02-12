@@ -1,0 +1,43 @@
+.filterList {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.3s ease;
+  padding-bottom: 1%;
+  width: 95%;
+  justify-self: center;
+}
+
+.slide {
+  flex: 1 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.arrows {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.arrow-left,
+.arrow-right {
+  font-size: 30px;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  color: #0056b3;
+}
