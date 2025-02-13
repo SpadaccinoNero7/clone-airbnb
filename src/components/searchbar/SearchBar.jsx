@@ -52,6 +52,7 @@ const SearchBar = () => {
         <img
           src="src\assets\lenteingrandimento-airbnb.jpeg"
           alt="lente ingrandimeno"
+          onClick={() => alert("Cliccato")}
         />
       </div>
     </div>
