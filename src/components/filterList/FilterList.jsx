@@ -32,8 +32,9 @@ import {
   faArrowLeft,
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import "./filterlist.scss";
-import { useState, useEffect } from "react";
+import styles from "./filterlist.module.scss";
+import { useState, useEffect, useContext } from "react";
+import { ViewModeContext } from "../../context/ViewModeContext";
 
 const FilterList = () => {
   const slides = [
@@ -144,19 +145,28 @@ const FilterList = () => {
     (currentSlideIndex + 1) * itemsPerSlide
   );
 
+  const { viewMode } = useContext(ViewModeContext);
+
   return (
-    <div className="filterList">
+    <div className={`${styles.filterList}`}>
       <h1>Filter list</h1>
-      <div className="slides">
+      <div className={`${styles.slides}`}>
         {currentSlides.map((slide, index) => (
-          <div className="slide" key={index}>
+          <div
+            className={
+              viewMode === "light-mode"
+                ? `${styles.slideLight}`
+                : `${styles.slideDark}`
+            }
+            key={index}
+          >
             <FontAwesomeIcon icon={slide.icon} />
             <br />
             <span>{slide.text}</span>
           </div>
         ))}
       </div>
-      <div className="arrows">
+      <div className={`${styles.arrows}`}>
         <FontAwesomeIcon
           icon={faArrowLeft}
           onClick={prevSlide}

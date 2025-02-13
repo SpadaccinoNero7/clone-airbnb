@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { ViewModeContext } from "../../context/ViewModeContext";
+import { useContext } from "react";
 
 export default function NavbarTemporanea() {
+  const { viewMode } = useContext(ViewModeContext);
+  const inactiveColor = viewMode === "dark-mode" ? "white" : "black";
   return (
     <>
       <nav>
@@ -8,7 +12,7 @@ export default function NavbarTemporanea() {
           to="firstsection"
           style={({ isActive }) => {
             return {
-              color: isActive ? "red" : "black",
+              color: isActive ? "red" : inactiveColor,
             };
           }}
         >
@@ -19,7 +23,7 @@ export default function NavbarTemporanea() {
           to="infopage"
           style={({ isActive }) => {
             return {
-              color: isActive ? "red" : "black",
+              color: isActive ? "red" : inactiveColor,
             };
           }}
         >
@@ -30,7 +34,7 @@ export default function NavbarTemporanea() {
           to="contatti"
           style={({ isActive }) => {
             return {
-              color: isActive ? "red" : "black",
+              color: isActive ? "red" : inactiveColor,
             };
           }}
         >
