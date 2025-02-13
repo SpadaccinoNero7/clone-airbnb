@@ -1,10 +1,8 @@
 import { z } from "zod";
 
 const schema = z.object({
-  location: z.string().nonempty(),
-  country: z.string().nonempty(),
-  leaveDate: z.string(),
-  returnDate: z.string(),
+  leaveDate: z.string().nonempty(),
+  returnDate: z.string().nonempty(),
 });
 
 export default schema;
