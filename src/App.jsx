@@ -88,19 +88,17 @@ function App() {
     },
   ]);
   return (
-    <ViewModeContextProvider>
-      <Wrapper>
-        {/* <Header />
+    <>
+      {/* <Header />
         <SearchBar /> */}
-        <FilterList />
-        <div className="cardList">
-          {card.map((i) => (
-            <Card key={i.id} card={i} />
-          ))}
-        </div>
-        <br />
-      </Wrapper>
-    </ViewModeContextProvider>
+      <FilterList />
+      <div className="cardList">
+        {card.map((i) => (
+          <Card key={i.id} card={i} />
+        ))}
+      </div>
+      <br />
+    </>
   );
 }
 
