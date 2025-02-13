@@ -98,6 +98,7 @@ function App() {
             <Card key={i.id} card={i} />
           ))}
         </div>
+        <br />
       </Wrapper>
     </ViewModeContextProvider>
   );

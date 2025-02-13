@@ -2,7 +2,7 @@ export default function InfoPage() {
   return (
     <>
       <br />
-      <div>InfoPage</div>
+      <h1>InfoPage</h1>
     </>
   );
 }
