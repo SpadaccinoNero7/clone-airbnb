@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "category": "Sezione principale",
+    "link": "firstsection"
+  },
+  {
+    "id": 2,
+    "category": "InfoPage",
+    "link": "infopage"
+  },
+  {
+    "id": 3,
+    "category": "Contatti",
+    "link": "contatti"
+  }
+]
