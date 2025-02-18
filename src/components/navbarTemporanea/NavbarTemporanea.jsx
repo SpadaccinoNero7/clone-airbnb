@@ -42,10 +42,9 @@ export default function NavbarTemporanea() {
       })
       .catch((error) => {
         setLoading(false);
-        setError(error);
+        setError(error.message);
       });
   }, []);
-  if (!data) return null;
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
