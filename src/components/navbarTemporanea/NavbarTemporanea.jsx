@@ -33,17 +33,15 @@ export default function NavbarTemporanea() {
 
   useEffect(() => {
     const url = "/file.json";
-
-    axios
-      .get(url)
-      .then((res) => {
+    try {
+      axios.get(url).then((res) => {
         setData(res.data);
         setLoading(false);
-      })
-      .catch((error) => {
-        setLoading(false);
-        setError(error.message);
       });
+    } catch (error) {
+      setLoading(false);
+      setError(error.message);
+    }
   }, []);
 
   if (loading) return <div>Loading...</div>;
