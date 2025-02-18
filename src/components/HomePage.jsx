@@ -12,7 +12,6 @@ export default function HomePage() {
     <>
       <ViewModeContextProvider>
         <Wrapper>
-          <h1>HomePage</h1>
           <Header />
           <SearchBar />
           <NavbarTemporanea />

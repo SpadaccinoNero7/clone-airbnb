@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { ViewModeContext } from "../../context/ViewModeContext";
 import { useContext, useEffect, useState } from "react";
+import axios from "axios";
 
 export default function NavbarTemporanea() {
   const { viewMode } = useContext(ViewModeContext);
@@ -10,7 +11,7 @@ export default function NavbarTemporanea() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
+  /*useEffect(() => {
     const url = "/file.json";
 
     fetch(url)
@@ -28,17 +29,33 @@ export default function NavbarTemporanea() {
         setError(error.message);
         setLoading(false);
       });
+  }, []); */
+
+  useEffect(() => {
+    const url = "/file.json";
+
+    axios
+      .get(url)
+      .then((res) => {
+        setData(res.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+        setError(error);
+      });
   }, []);
+  if (!data) return null;
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return (
     <>
-      <ul>
+      <nav>
         {data.map((i) => {
           return (
-            <li key={i.id}>
+            <p key={i.id}>
               <NavLink
                 to={`${i.link}`}
                 style={({ isActive }) => {
@@ -49,44 +66,10 @@ export default function NavbarTemporanea() {
               >
                 {i.category}
               </NavLink>
-            </li>
+            </p>
           );
         })}
-      </ul>
-      {/* <nav>
-        <NavLink
-          to="firstsection"
-          style={({ isActive }) => {
-            return {
-              color: isActive ? "red" : inactiveColor,
-            };
-          }}
-        >
-          Sezione principale
-        </NavLink>{" "}
-        {""}
-        <NavLink
-          to="infopage"
-          style={({ isActive }) => {
-            return {
-              color: isActive ? "red" : inactiveColor,
-            };
-          }}
-        >
-          InfoPage
-        </NavLink>
-        {""} {""}
-        <NavLink
-          to="contatti"
-          style={({ isActive }) => {
-            return {
-              color: isActive ? "red" : inactiveColor,
-            };
-          }}
-        >
-          Contatti
-        </NavLink>
-      </nav> */}
+      </nav>
     </>
   );
 }
