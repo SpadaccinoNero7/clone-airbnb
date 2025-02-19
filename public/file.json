@@ -2,16 +2,25 @@
   {
     "id": 1,
     "category": "Sezione principale",
-    "link": "firstsection"
+    "link": "firstsection",
+    "visible": true
   },
   {
     "id": 2,
     "category": "InfoPage",
-    "link": "infopage"
+    "link": "infopage",
+    "visible": true
   },
   {
     "id": 3,
     "category": "Contatti",
-    "link": "contatti"
+    "link": "contatti",
+    "visible": true
+  },
+  {
+    "id": 4,
+    "category": "Prenotazioni",
+    "link": "prenotazioni",
+    "visible": true
   }
 ]

@@ -1,10 +1,6 @@
 import { useState } from "react";
-import Wrapper from "./components/wrapper/Wrapper";
-import SearchBar from "./components/searchbar/SearchBar";
 import FilterList from "./components/filterList/FilterList";
 import Card from "./components/card/Card";
-import Header from "./components/header/Header";
-import ViewModeContextProvider from "./context/ViewModeContext";
 import "./styles/main.scss";
 
 function App() {
@@ -89,8 +85,6 @@ function App() {
   ]);
   return (
     <>
-      {/* <Header />
-        <SearchBar /> */}
       <FilterList />
       <div className="cardList">
         {card.map((i) => (

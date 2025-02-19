@@ -53,16 +53,18 @@ export default function NavbarTemporanea() {
         {data.map((i) => {
           return (
             <p key={i.id}>
-              <NavLink
-                to={`${i.link}`}
-                style={({ isActive }) => {
-                  return {
-                    color: isActive ? "red" : inactiveColor,
-                  };
-                }}
-              >
-                {i.category}
-              </NavLink>
+              {i.visible && (
+                <NavLink
+                  to={`${i.link}`}
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "red" : inactiveColor,
+                    };
+                  }}
+                >
+                  {i.category}
+                </NavLink>
+              )}
             </p>
           );
         })}
