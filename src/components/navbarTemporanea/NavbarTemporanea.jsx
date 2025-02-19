@@ -8,30 +8,6 @@ export default function NavbarTemporanea() {
   const inactiveColor = viewMode === "dark-mode" ? "white" : "black";
   const { data, loading, error } = useFetch("/file.json");
 
-  /*   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null); */
-
-  /*useEffect(() => {
-    const url = "/file.json";
-
-    fetch(url)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Errore");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(error.message);
-        setLoading(false);
-      });
-  }, []); */
-
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
