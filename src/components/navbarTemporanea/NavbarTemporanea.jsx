@@ -1,15 +1,16 @@
 import { NavLink } from "react-router-dom";
 import { ViewModeContext } from "../../context/ViewModeContext";
-import { useContext, useEffect, useState } from "react";
-import axios from "axios";
+import { useContext } from "react";
+import { useFetch } from "../../customHook/useFetch";
 
 export default function NavbarTemporanea() {
   const { viewMode } = useContext(ViewModeContext);
   const inactiveColor = viewMode === "dark-mode" ? "white" : "black";
+  const { data, loading, error } = useFetch("/file.json");
 
-  const [data, setData] = useState([]);
+  /*   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null); */
 
   /*useEffect(() => {
     const url = "/file.json";
@@ -30,19 +31,6 @@ export default function NavbarTemporanea() {
         setLoading(false);
       });
   }, []); */
-
-  useEffect(() => {
-    const url = "/file.json";
-    try {
-      axios.get(url).then((res) => {
-        setData(res.data);
-        setLoading(false);
-      });
-    } catch (error) {
-      setLoading(false);
-      setError(error.message);
-    }
-  }, []);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;

@@ -1,27 +1,33 @@
 import { useContext } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { ViewModeContext } from "../../../context/ViewModeContext";
+import { useFetch } from "../../../customHook/useFetch";
 
 export default function Prenotazioni() {
-  const prenotazioni = [1, 2, 3, 4, 5];
+  const { data, loading, error } = useFetch("/prenotazioni.json");
   const { viewMode } = useContext(ViewModeContext);
   const inactiveColor = viewMode === "dark-mode" ? "white" : "black";
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
   return (
     <>
       <h1>Prenotazioni</h1>
-      {prenotazioni.map((i) => {
+      {data.map((i) => {
         return (
-          <NavLink
-            key={i}
-            to={`${i}`}
-            style={({ isActive }) => {
-              return {
-                color: isActive ? "red" : inactiveColor,
-              };
-            }}
-          >
-            Prenotazione {i}
-          </NavLink>
+          <p key={i.id}>
+            <NavLink
+              to={`${i.link}`}
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "red" : inactiveColor,
+                };
+              }}
+            >
+              {i.category}
+            </NavLink>
+          </p>
         );
       })}
       <Outlet />
