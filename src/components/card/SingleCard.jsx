@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../customHook/useFetch";
 import styles from "./singleCard.module.scss";
-import { useRedirect } from "../../customHook/useRedirect";
+import NotFound from "../notFound/notFound";
 
 export default function SingleCard() {
   const params = useParams();
@@ -13,11 +13,12 @@ export default function SingleCard() {
 
   const card = data.find(({ id }) => id === Number(params.cardId));
 
-  if (!card) useRedirect("/", 1000);
   return (
     <>
-      <div className={`${styles.singleCard}`}>
-        <>
+      {!card ? (
+        <NotFound />
+      ) : (
+        <div className={`${styles.singleCard}`}>
           <div className={`${styles.title}`}>
             <h1>Host: {card.host}</h1>
             <h1>Location: {card.location}</h1>
@@ -27,8 +28,8 @@ export default function SingleCard() {
             <img src={card.img.second} className={`${styles.newImg}`} />
             <img src={card.img.third} className={`${styles.newImg}`} />
           </div>
-        </>
-      </div>
+        </div>
+      )}
     </>
   );
 }
