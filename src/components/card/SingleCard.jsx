@@ -42,6 +42,8 @@ export default function SingleCard() {
               </p>
               <div>
                 <h1>Amato dagli ospiti</h1>
+                <p>{card.rating}</p>
+                <p>{card.review} recensioni</p>
               </div>
               <div className="hostSection">
                 <h4>Nome dell'host: {card.host.name}</h4>
@@ -53,6 +55,7 @@ export default function SingleCard() {
                   {""}
                   da host
                 </p>
+                <hr />
               </div>
             </div>
           </div>
