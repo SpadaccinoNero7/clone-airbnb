@@ -4,7 +4,11 @@
     "location": "Trasquera",
     "country": "Italia",
     "type": "Baita",
-    "host": "Loredana",
+    "host": {
+      "name": "Loredana",
+      "yearsSinceHost": 3,
+      "isSuperhost": true
+    },
     "checkin_date": 7,
     "checkout_date": 12,
     "month": "gen",
@@ -24,7 +28,11 @@
     "location": "Bettmeralp",
     "country": "Svizzera",
     "type": "Trullo",
-    "host": "David Und Elenore",
+    "host": {
+      "name": "David und Elenore",
+      "yearsSinceHost": 10,
+      "isSuperhost": true
+    },
     "checkin_date": 16,
     "checkout_date": 21,
     "month": "mag",
@@ -44,7 +52,11 @@
     "location": "Varzo",
     "country": "Italia",
     "type": "Iurta",
-    "host": "Francesca BB Chalet Il Picchio",
+    "host": {
+      "name": "Francesca BB Chalet Il Picchio",
+      "yearsSinceHost": 1,
+      "isSuperhost": true
+    },
     "checkin_date": 16,
     "checkout_date": 21,
     "month": "dic",
@@ -64,7 +76,11 @@
     "location": "Lauterbrunnen",
     "country": "Svizzera",
     "type": "Castello",
-    "host": "azienda specializzata",
+    "host": {
+      "name": "azienda specializzata",
+      "yearsSinceHost": 8,
+      "isSuperhost": false
+    },
     "checkin_date": 6,
     "checkout_date": 11,
     "month": "gen",
@@ -84,7 +100,11 @@
     "location": "Rabbi",
     "country": "Italia",
     "type": "Cupola",
-    "host": "Nicola",
+    "host": {
+      "name": "Nicola",
+      "yearsSinceHost": 5,
+      "isSuperhost": false
+    },
     "checkin_date": 6,
     "checkout_date": 11,
     "month": "gen",
@@ -104,7 +124,11 @@
     "location": "Obermutten",
     "country": "Svizzera",
     "type": "Villa",
-    "host": "Silvia",
+    "host": {
+      "name": "Silvia",
+      "yearsSinceHost": 3,
+      "isSuperhost": true
+    },
     "checkin_date": 24,
     "checkout_date": 30,
     "month": "gen",
@@ -124,7 +148,11 @@
     "location": "Thyon Les Collons",
     "country": "Svizzera",
     "type": "Grotta",
-    "host": "azienda specializzata",
+    "host": {
+      "name": "azienda specializzata",
+      "yearsSinceHost": 15,
+      "isSuperhost": false
+    },
     "checkin_date": 13,
     "checkout_date": 18,
     "month": "gen",

@@ -7,7 +7,7 @@ const Card = ({ card }) => {
         {card.location}, {card.country}{" "}
         {card.isStarred ? <div>🖤</div> : <div>♡</div>}
       </h5>
-      <p>Host: {card.host}</p>
+      <p>Host: {card.host.name}</p>
       <p>
         {card.checkin_date}-{card.checkout_date} {card.month}
       </p>

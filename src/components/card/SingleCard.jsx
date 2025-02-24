@@ -40,6 +40,20 @@ export default function SingleCard() {
                   : `${card.bedroom} camera da letto`}{" "}
                 - {card.bed > 1 ? `${card.bed} letti` : `${card.bed} letto`}
               </p>
+              <div>
+                <h1>Amato dagli ospiti</h1>
+              </div>
+              <div className="hostSection">
+                <h4>Nome dell'host: {card.host.name}</h4>
+                <p>
+                  {card.host.isSuperhost ? "Superhost" : null}{" "}
+                  {card.host.yearsSinceHost > 1
+                    ? `${card.host.yearsSinceHost} anni`
+                    : `${card.host.yearsSinceHost} anno`}{" "}
+                  {""}
+                  da host
+                </p>
+              </div>
             </div>
           </div>
         </>
