@@ -13,3 +13,8 @@ body {
 .light-mode {
     @include mixins.theme()
 }
+
+img {
+    height: 50px;
+    width: 75px;
+}

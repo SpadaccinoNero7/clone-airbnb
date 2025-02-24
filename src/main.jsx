@@ -7,6 +7,8 @@ import HomePage from "./components/HomePage.jsx";
 import Contatti from "./components/navbarTemporanea/contatti/Contatti.jsx";
 import Prenotazioni from "./components/navbarTemporanea/prenotazioni/Prenotazioni.jsx";
 import Prenotazione from "./components/navbarTemporanea/prenotazioni/Prenotazione.jsx";
+import SingleCard from "./components/card/SingleCard.jsx";
+import NotFound from "./components/notFound/notFound.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -21,6 +23,8 @@ createRoot(document.getElementById("root")).render(
             <Route path=":prenotazioneId" element={<Prenotazione />} />
           </Route>
         </Route>
+        <Route path="singlecard/:cardId" element={<SingleCard />}></Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
