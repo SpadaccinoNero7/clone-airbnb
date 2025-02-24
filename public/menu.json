@@ -8,7 +8,12 @@
     "checkout_date": 12,
     "month": "gen",
     "price": 256,
-    "isStarred": false
+    "isStarred": false,
+    "img": {
+      "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
+      "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
+      "third": "https://clipart-library.com/8300/1931/sticker-template-with-mini-house-isolated_1308-60687.jpg"
+    }
   },
   {
     "id": 2,
@@ -19,7 +24,12 @@
     "checkout_date": 21,
     "month": "mag",
     "price": 213,
-    "isStarred": true
+    "isStarred": false,
+    "img": {
+      "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
+      "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
+      "third": "https://clipart-library.com/8300/1931/sticker-template-with-mini-house-isolated_1308-60687.jpg"
+    }
   },
   {
     "id": 3,
@@ -30,7 +40,12 @@
     "checkout_date": 21,
     "month": "dic",
     "price": 142,
-    "isStarred": false
+    "isStarred": false,
+    "img": {
+      "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
+      "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
+      "third": "https://clipart-library.com/8300/1931/sticker-template-with-mini-house-isolated_1308-60687.jpg"
+    }
   },
   {
     "id": 4,
@@ -41,7 +56,12 @@
     "checkout_date": 11,
     "month": "gen",
     "price": 441,
-    "isStarred": false
+    "isStarred": false,
+    "img": {
+      "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
+      "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
+      "third": "https://clipart-library.com/8300/1931/sticker-template-with-mini-house-isolated_1308-60687.jpg"
+    }
   },
   {
     "id": 5,
@@ -52,7 +72,12 @@
     "checkout_date": 11,
     "month": "gen",
     "price": 235,
-    "isStarred": false
+    "isStarred": false,
+    "img": {
+      "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
+      "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
+      "third": "https://clipart-library.com/8300/1931/sticker-template-with-mini-house-isolated_1308-60687.jpg"
+    }
   },
   {
     "id": 6,
@@ -63,7 +88,12 @@
     "checkout_date": 30,
     "month": "gen",
     "price": 106,
-    "isStarred": false
+    "isStarred": false,
+    "img": {
+      "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
+      "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
+      "third": "https://clipart-library.com/8300/1931/sticker-template-with-mini-house-isolated_1308-60687.jpg"
+    }
   },
   {
     "id": 7,
@@ -74,6 +104,11 @@
     "checkout_date": 18,
     "month": "gen",
     "price": 1071,
-    "isStarred": true
+    "isStarred": false,
+    "img": {
+      "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
+      "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
+      "third": "https://clipart-library.com/8300/1931/sticker-template-with-mini-house-isolated_1308-60687.jpg"
+    }
   }
 ]
