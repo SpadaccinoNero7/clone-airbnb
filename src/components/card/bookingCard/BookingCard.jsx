@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../../customHook/useFetch";
+import styles from "./bookingCard.module.scss";
 
 export default function BookingCard() {
   const { data, loading, error } = useFetch("/menu.json");
@@ -17,14 +18,58 @@ export default function BookingCard() {
     card.date.monthDigit
   ).padStart(2, "0")}-${String(card.date.checkout_date).padStart(2, "0")}`;
 
+  function handleMolt(num1, num2) {
+    return num1 * num2;
+  }
+
+  const firstNum = card.price.perNight;
+  const totalDays = card.date.checkout_date - card.date.checkin_date;
+  const totalPrice =
+    handleMolt(firstNum, totalDays) +
+    card.price.cleaning +
+    card.price.airbnbService +
+    card.price.taxes;
+
   return (
     <>
-      <div>BookingCard</div>
-      {card.price.perNight} € notte
-      <p>
-        <input type="date" defaultValue={checkinDate} />
-        <input type="date" defaultValue={checkoutDate} />
-      </p>
+      <div className={styles.bookingCard}>
+        <div className={styles.prn}>{card.price.perNight} € notte</div>
+        <div className={styles.date}>
+          <p>
+            <input type="date" defaultValue={checkinDate} />
+            <input type="date" defaultValue={checkoutDate} />
+          </p>
+          <p>
+            <button>Prenota</button>
+          </p>
+        </div>
+        <p>Non riceverai alcun addebito in questa fase</p>
+        <div className={styles.priceBooking}>
+          <div className={styles.priceNigths}>
+            <p>
+              {card.price.perNight} € x {totalDays} notti
+            </p>
+            <p>{handleMolt(firstNum, totalDays)} €</p>
+          </div>
+          <div className={styles.priceCleaning}>
+            <p>Costi di pulizia</p>
+            <p>{card.price.cleaning} €</p>
+          </div>
+          <div className={styles.priceService}>
+            <p>Costi del servizio Airbnb</p>
+            <p>{card.price.airbnbService} €</p>
+          </div>
+          <div className={styles.priceTaxes}>
+            <p>Tasse</p>
+            <p>{card.price.taxes} €</p>
+          </div>
+          <hr className={styles.hr} />
+          <div className={styles.priceTotal}>
+            <p>Totale</p>
+            <p>{totalPrice} €</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
