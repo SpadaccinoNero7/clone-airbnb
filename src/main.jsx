@@ -7,8 +7,8 @@ import HomePage from "./components/HomePage.jsx";
 import Contatti from "./components/navbarTemporanea/contatti/Contatti.jsx";
 import Prenotazioni from "./components/navbarTemporanea/prenotazioni/Prenotazioni.jsx";
 import Prenotazione from "./components/navbarTemporanea/prenotazioni/Prenotazione.jsx";
-import SingleCard from "./components/card/SingleCard.jsx";
 import NotFound from "./components/notFound/notFound.jsx";
+import SingleCard from "./components/card/singelCard/SingleCard.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import { useFetch } from "../../customHook/useFetch";
+import { useFetch } from "../../../customHook/useFetch";
 import styles from "./singleCard.module.scss";
-import NotFound from "../notFound/notFound";
-import Header from "../header/Header";
-import SearchBar from "../searchbar/SearchBar";
+import NotFound from "../../notFound/notFound";
+import Header from "../../header/Header";
+import SearchBar from "../../searchbar/SearchBar";
 
 export default function SingleCard() {
   const params = useParams();

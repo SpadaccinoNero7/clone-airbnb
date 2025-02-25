@@ -2,7 +2,7 @@ import FilterList from "./components/filterList/FilterList";
 import "./styles/main.scss";
 import { useFetch } from "./customHook/useFetch";
 import { Link } from "react-router-dom";
-import CardResidenze from "./components/card/CardResidenze";
+import CardResidenze from "./components/card/cardRedisenze/CardResidenze";
 
 function App() {
   const { data, loading, error } = useFetch("/menu.json");
