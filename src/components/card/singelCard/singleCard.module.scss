@@ -26,11 +26,13 @@
 .title {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .titleCard {
     display: flex;
     flex-direction: column;
+    width: 40%;
 }
 
 .bookingCard {
