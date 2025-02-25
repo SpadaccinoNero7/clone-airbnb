@@ -4,6 +4,7 @@ import schema from "./schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
+import SearchIcon from "@mui/icons-material/Search";
 
 const SearchBar = () => {
   const {
@@ -59,11 +60,9 @@ const SearchBar = () => {
             <h4>Chi</h4>
             <p>Aggiungi ospiti</p>
           </div>
-          <img
-            src="src\assets\lenteingrandimento-airbnb.jpeg"
-            className={`${styles.lenteingrandimento}`}
-            alt="lente ingrandimento"
-          />
+          <div className={`${styles.lenteingrandimento}`}>
+            <SearchIcon />
+          </div>
         </div>
       </div>
       <button type="submit" disabled={!isValid}>

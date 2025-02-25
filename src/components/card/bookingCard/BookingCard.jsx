@@ -35,14 +35,26 @@ export default function BookingCard() {
       <div className={styles.bookingCard}>
         <div className={styles.prn}>{card.price.perNight} € notte</div>
         <div className={styles.date}>
-          <p>
-            <input type="date" defaultValue={checkinDate} />
-            <input type="date" defaultValue={checkoutDate} />
-          </p>
-          <p>
-            <button>Prenota</button>
-          </p>
+          <div className={styles.dateCheckin}>
+            <label htmlFor="checkin_date">check-in</label>
+            <input
+              id="checkin_date"
+              type="date"
+              defaultValue={checkinDate}
+              className={styles.dateInput}
+            />
+          </div>
+          <div className={styles.dateCheckout}>
+            <label htmlFor="checkout_date">check-out</label>
+            <input
+              id="checkout_date"
+              type="date"
+              defaultValue={checkoutDate}
+              className={styles.dateInput}
+            />
+          </div>
         </div>
+        <button>Prenota</button>
         <p>Non riceverai alcun addebito in questa fase</p>
         <div className={styles.priceBooking}>
           <div className={styles.priceNigths}>

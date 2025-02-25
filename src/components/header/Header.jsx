@@ -1,5 +1,8 @@
 import "./header.scss";
 import styles from "./header.module.scss";
+import PersonIcon from "@mui/icons-material/Person";
+import MenuIcon from "@mui/icons-material/Menu";
+import LanguageIcon from "@mui/icons-material/Language";
 
 const Header = () => {
   return (
@@ -19,14 +22,14 @@ const Header = () => {
 
       <div className={`affittaconairbnb ${styles.hoverSectionPointer}`}>
         <h4>Affitta con Airbnb</h4>
-        <img src="src\assets\sfera-lingue-airbnb.jpeg" alt="language sphere" />
+        <LanguageIcon />
       </div>
 
       <div className={`altra-roba ${styles.hoverSectionPointer}`}>
         <details>
           <summary>
-            <img src="src\assets\menu-airbnb.jpg" alt="menu" />
-            <img src="src\assets\person-icon-airbnb.jpeg" alt="icon person" />
+            <MenuIcon />
+            <PersonIcon />
           </summary>
           <ul>
             <li>Registrati</li>
