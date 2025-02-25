@@ -4,6 +4,7 @@ import styles from "./singleCard.module.scss";
 import NotFound from "../../notFound/notFound";
 import Header from "../../header/Header";
 import SearchBar from "../../searchbar/SearchBar";
+import BookingCard from "../bookingCard/BookingCard";
 
 export default function SingleCard() {
   const params = useParams();
@@ -56,6 +57,9 @@ export default function SingleCard() {
                   da host
                 </p>
                 <hr />
+              </div>
+              <div className="bookingCard">
+                <BookingCard />
               </div>
             </div>
           </div>

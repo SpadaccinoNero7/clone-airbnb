@@ -9,10 +9,19 @@
       "yearsSinceHost": 3,
       "isSuperhost": true
     },
-    "checkin_date": 7,
-    "checkout_date": 12,
-    "month": "gen",
-    "price": 256,
+    "date": {
+      "year": 2025,
+      "checkin_date": 7,
+      "checkout_date": 12,
+      "monthAlphabet": "gen",
+      "monthDigit": 1
+    },
+    "price": {
+      "perNight": 256,
+      "cleaning": 15,
+      "airbnbService": 54,
+      "taxes": 33
+    },
     "rating": 5.0,
     "reviews": 23,
     "ospitiTot": 7,
@@ -35,10 +44,19 @@
       "yearsSinceHost": 10,
       "isSuperhost": true
     },
-    "checkin_date": 16,
-    "checkout_date": 21,
-    "month": "mag",
-    "price": 213,
+    "date": {
+      "year": 2025,
+      "checkin_date": 16,
+      "checkout_date": 21,
+      "monthAlphabet": "mag",
+      "monthDigit": 5
+    },
+    "price": {
+      "perNight": 213,
+      "cleaning": 30,
+      "airbnbService": 32,
+      "taxes": 14
+    },
     "rating": 4.5,
     "reviews": 50,
     "ospitiTot": 2,
@@ -61,10 +79,19 @@
       "yearsSinceHost": 1,
       "isSuperhost": true
     },
-    "checkin_date": 16,
-    "checkout_date": 21,
-    "month": "dic",
-    "price": 142,
+    "date": {
+      "year": 2025,
+      "checkin_date": 16,
+      "checkout_date": 21,
+      "monthAlphabet": "dic",
+      "monthDigit": 12
+    },
+    "price": {
+      "perNight": 142,
+      "cleaning": 44,
+      "airbnbService": 12,
+      "taxes": 5
+    },
     "rating": 4.7,
     "reviews": 33,
     "ospitiTot": 5,
@@ -87,10 +114,19 @@
       "yearsSinceHost": 8,
       "isSuperhost": false
     },
-    "checkin_date": 6,
-    "checkout_date": 11,
-    "month": "gen",
-    "price": 441,
+    "date": {
+      "year": 2025,
+      "checkin_date": 6,
+      "checkout_date": 11,
+      "monthAlphabet": "gen",
+      "monthDigit": 1
+    },
+    "price": {
+      "perNight": 441,
+      "cleaning": 56,
+      "airbnbService": 80,
+      "taxes": 59
+    },
     "rating": 4.2,
     "reviews": 61,
     "ospitiTot": 9,
@@ -113,10 +149,19 @@
       "yearsSinceHost": 5,
       "isSuperhost": false
     },
-    "checkin_date": 6,
-    "checkout_date": 11,
-    "month": "gen",
-    "price": 235,
+    "date": {
+      "year": 2025,
+      "checkin_date": 6,
+      "checkout_date": 11,
+      "monthAlphabet": "gen",
+      "monthDigit": 1
+    },
+    "price": {
+      "perNight": 235,
+      "cleaning": 38,
+      "airbnbService": 45,
+      "taxes": 21
+    },
     "rating": 4.9,
     "reviews": 21,
     "ospitiTot": 3,
@@ -139,10 +184,19 @@
       "yearsSinceHost": 3,
       "isSuperhost": true
     },
-    "checkin_date": 24,
-    "checkout_date": 30,
-    "month": "gen",
-    "price": 106,
+    "date": {
+      "year": 2025,
+      "checkin_date": 24,
+      "checkout_date": 30,
+      "monthAlphabet": "gen",
+      "monthDigit": 1
+    },
+    "price": {
+      "perNight": 106,
+      "cleaning": 15,
+      "airbnbService": 10,
+      "taxes": 33
+    },
     "rating": 4.0,
     "reviews": 5,
     "ospitiTot": 6,
@@ -165,10 +219,19 @@
       "yearsSinceHost": 15,
       "isSuperhost": false
     },
-    "checkin_date": 13,
-    "checkout_date": 18,
-    "month": "gen",
-    "price": 1071,
+    "date": {
+      "year": 2025,
+      "checkin_date": 13,
+      "checkout_date": 18,
+      "monthAlphabet": "gen",
+      "monthDigit": 1
+    },
+    "price": {
+      "perNight": 1071,
+      "cleaning": 56,
+      "airbnbService": 130,
+      "taxes": 98
+    },
     "rating": 5.0,
     "reviews": 22,
     "ospitiTot": 2,

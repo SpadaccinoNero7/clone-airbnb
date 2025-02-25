@@ -9,9 +9,10 @@ const CardResidenze = ({ card }) => {
       </h5>
       <p>Host: {card.host.name}</p>
       <p>
-        {card.checkin_date}-{card.checkout_date} {card.month}
+        {card.date.checkin_date}-{card.date.checkout_date}{" "}
+        {card.date.monthAlphabet}
       </p>
-      <p>{card.price} € notte</p>
+      <p>{card.price.perNight} € notte</p>
     </div>
   );
 };
