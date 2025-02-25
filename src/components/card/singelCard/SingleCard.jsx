@@ -30,35 +30,39 @@ export default function SingleCard() {
               <img src={card.img.second} className={`${styles.newImg}`} />
               <img src={card.img.third} className={`${styles.newImg}`} />
             </div>
-            <div className={`${styles.title}`}>
-              <h3>
-                {card.location}, {card.country}. {card.type}
-              </h3>
-              <p>
-                {card.ospitiTot} ospiti -{" "}
-                {card.bedroom > 1
-                  ? `${card.bedroom} camere da letto`
-                  : `${card.bedroom} camera da letto`}{" "}
-                - {card.bed > 1 ? `${card.bed} letti` : `${card.bed} letto`}
-              </p>
-              <div>
-                <h1>Amato dagli ospiti</h1>
-                <p>{card.rating}</p>
-                <p>{card.review} recensioni</p>
+            <div className={styles.title}>
+              <div className={styles.titleCard}>
+                <div className={styles.infoLocation}>
+                  <h3>
+                    {card.location}, {card.country}. {card.type}
+                  </h3>
+                  <p>
+                    {card.ospitiTot} ospiti -{" "}
+                    {card.bedroom > 1
+                      ? `${card.bedroom} camere da letto`
+                      : `${card.bedroom} camera da letto`}{" "}
+                    - {card.bed > 1 ? `${card.bed} letti` : `${card.bed} letto`}
+                  </p>
+                </div>
+                <div className={styles.rating}>
+                  <h3>Amato dagli ospiti</h3>
+                  <p>{card.rating}</p>
+                  <p>{card.reviews} recensioni</p>
+                </div>
+                <div className={styles.hostSection}>
+                  <h4>Nome dell'host: {card.host.name}</h4>
+                  <p>
+                    {card.host.isSuperhost ? "Superhost" : null}{" "}
+                    {card.host.yearsSinceHost > 1
+                      ? `${card.host.yearsSinceHost} anni`
+                      : `${card.host.yearsSinceHost} anno`}{" "}
+                    {""}
+                    da host
+                  </p>
+                  <hr />
+                </div>
               </div>
-              <div className="hostSection">
-                <h4>Nome dell'host: {card.host.name}</h4>
-                <p>
-                  {card.host.isSuperhost ? "Superhost" : null}{" "}
-                  {card.host.yearsSinceHost > 1
-                    ? `${card.host.yearsSinceHost} anni`
-                    : `${card.host.yearsSinceHost} anno`}{" "}
-                  {""}
-                  da host
-                </p>
-                <hr />
-              </div>
-              <div className="bookingCard">
+              <div className={styles.bookingCard}>
                 <BookingCard />
               </div>
             </div>

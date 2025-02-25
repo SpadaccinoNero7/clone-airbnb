@@ -4,8 +4,9 @@
     background-color: #000000;
     border-radius: 20px;
     color: white;
-    width: 25%;
+    width: 100%;
     text-align: center;
+    padding: 25px
 }
 
 .prn {
@@ -21,7 +22,6 @@
 .priceNigths, .priceCleaning, .priceService, .priceTaxes, .priceTotal {
     display: flex;
     justify-content: space-between;
-    margin: 0 10px;
 }
 
 .date {
