@@ -1,6 +1,6 @@
 import "./card.scss";
 
-const Card = ({ card }) => {
+const CardResidenze = ({ card }) => {
   return (
     <div className="card">
       <h5>
@@ -16,4 +16,4 @@ const Card = ({ card }) => {
   );
 };
 
-export default Card;
+export default CardResidenze;
