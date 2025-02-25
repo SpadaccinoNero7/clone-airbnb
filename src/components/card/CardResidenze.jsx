@@ -1,4 +1,4 @@
-import "./card.scss";
+import "./cardResidenze.scss";
 
 const CardResidenze = ({ card }) => {
   return (
