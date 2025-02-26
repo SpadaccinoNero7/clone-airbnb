@@ -49,9 +49,19 @@ export default function SingleCard() {
               </div>
             </div>
             <div className={`${styles.images}`}>
-              <img src={card.img.first} className={`${styles.newImg}`} />
-              <img src={card.img.second} className={`${styles.newImg}`} />
-              <img src={card.img.third} className={`${styles.newImg}`} />
+              {card.img.map((item, index) => {
+                // Per ogni elemento dell'array, accediamo alla chiave dinamica (first, second, third)
+                const key = Object.keys(item)[1]; // otteniamo la chiave "first", "second" o "third"
+                const { img } = item[key]; // accediamo a "title" e "description"
+
+                return (
+                  <img
+                    key={index}
+                    src={img}
+                    className={`${styles.newImg}`}
+                  ></img>
+                );
+              })}
             </div>
             <div className={styles.title}>
               <div className={styles.titleCard}>
