@@ -21,10 +21,17 @@
 .rating {
     display: flex;
     justify-content: space-between;
+    text-align: center;
+    align-items: center;
     border: 1px solid black;
     border-radius: 10px;
     padding: 0 1% 1%;
     margin: 5% 30% 0 0;
+    width: 100%;
+}
+
+.spacingDiv {
+    width: 20%
 }
 
 .recensioni {

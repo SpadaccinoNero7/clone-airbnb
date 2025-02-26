@@ -16,10 +16,15 @@ export default function SingleCard() {
 
   const card = data.find(({ id }) => id === Number(params.cardId));
 
-  const star = <StarIcon fontSize="small" />;
-
   const countStar = () => {
-    return star * card.rating;
+    const rating = card.rating;
+    let stars = [];
+
+    for (let i = 0; i < rating; i++) {
+      stars.push(<StarIcon fontSize="small" key={i} />);
+    }
+
+    return stars;
   };
 
   return (
@@ -73,6 +78,7 @@ export default function SingleCard() {
                   <hr />
                 </div>
               </div>
+              <div className={styles.spacingDiv}></div>
               <div className={styles.bookingCard}>
                 <BookingCard />
               </div>
