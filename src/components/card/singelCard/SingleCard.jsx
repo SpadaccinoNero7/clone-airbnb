@@ -27,8 +27,6 @@ export default function SingleCard() {
     return stars;
   };
 
-  console.log(card.infoLocation);
-
   return (
     <>
       {!card ? (
@@ -80,15 +78,20 @@ export default function SingleCard() {
                   <hr />
                 </div>
                 <div className={styles.particularity}>
-                  {card.infoLocation.map((i) => {
+                  {card.infoLocation.map((item, index) => {
+                    // Per ogni elemento dell'array, accediamo alla chiave dinamica (first, second, third)
+                    const key = Object.keys(item)[1]; // otteniamo la chiave "first", "second" o "third"
+                    const { title, description } = item[key]; // accediamo a "title" e "description"
+
                     return (
-                      <div key={i.id}>
-                        <h4>{i.title}</h4>
-                        <p>{i.description}</p>
+                      <div key={index}>
+                        <h4>{title}</h4>
+                        <p>{description}</p>
                       </div>
                     );
                   })}
                 </div>
+                <hr />
               </div>
               <div className={styles.spacingDiv}></div>
               <div className={styles.bookingCard}>
