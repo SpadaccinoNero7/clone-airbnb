@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom";
 import { useFetch } from "../../../customHook/useFetch";
 import styles from "./singleCard.module.scss";
 import NotFound from "../../notFound/notFound";
-import Header from "../../header/Header";
-import SearchBar from "../../searchbar/SearchBar";
 import BookingCard from "../bookingCard/BookingCard";
+import StarIcon from "@mui/icons-material/Star";
+import SearchBarCompatta from "../../searchbar/SearchBarCompatta";
 
 export default function SingleCard() {
   const params = useParams();
@@ -16,15 +16,20 @@ export default function SingleCard() {
 
   const card = data.find(({ id }) => id === Number(params.cardId));
 
+  const star = <StarIcon fontSize="small" />;
+
+  const countStar = () => {
+    return star * card.rating;
+  };
+
   return (
     <>
       {!card ? (
         <NotFound />
       ) : (
         <>
-          <Header />
-          <SearchBar />
           <div className={`${styles.singleCard}`}>
+            <SearchBarCompatta />
             <div className={`${styles.images}`}>
               <img src={card.img.first} className={`${styles.newImg}`} />
               <img src={card.img.second} className={`${styles.newImg}`} />
@@ -46,8 +51,14 @@ export default function SingleCard() {
                 </div>
                 <div className={styles.rating}>
                   <h3>Amato dagli ospiti</h3>
-                  <p>{card.rating}</p>
-                  <p>{card.reviews} recensioni</p>
+                  <div>
+                    <h3>{card.rating}</h3>
+                    <p>{countStar()}</p>
+                  </div>
+                  <div className={styles.recensioni}>
+                    {card.reviews}
+                    <p>recensioni</p>
+                  </div>
                 </div>
                 <div className={styles.hostSection}>
                   <h4>Nome dell'host: {card.host.name}</h4>
