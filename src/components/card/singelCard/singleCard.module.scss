@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 5%;
-    margin-top: 5%;
 }
 
 .newImg {
@@ -51,6 +50,18 @@
     display: flex;
     flex-direction: column;
     width: 60%;
+}
+
+.titlePage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titlePageIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
 }
 
 .bookingCard {

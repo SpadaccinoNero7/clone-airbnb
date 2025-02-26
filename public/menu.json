@@ -27,6 +27,7 @@
     "ospitiTot": 7,
     "bedroom": 1,
     "bed": 4,
+    "titlePage": "Baita in montagna con vista panoramica",
     "isStarred": false,
     "infoLocation": [
       {
@@ -85,6 +86,7 @@
     "ospitiTot": 2,
     "bedroom": 1,
     "bed": 1,
+    "titlePage": "Trullo con vista panoramica",
     "isStarred": false,
     "infoLocation": [
       {
@@ -143,6 +145,7 @@
     "ospitiTot": 5,
     "bedroom": 1,
     "bed": 2,
+    "titlePage": "Iurta in montagna con vista panoramica",
     "isStarred": false,
     "infoLocation": [
       {
@@ -201,6 +204,7 @@
     "ospitiTot": 9,
     "bedroom": 4,
     "bed": 5,
+    "titlePage": "Castello in montagna con vista panoramica",
     "isStarred": false,
     "infoLocation": [
       {
@@ -259,6 +263,7 @@
     "ospitiTot": 3,
     "bedroom": 1,
     "bed": 1,
+    "titlePage": "Cupola in montagna con vista panoramica",
     "isStarred": false,
     "infoLocation": [
       {
@@ -317,6 +322,7 @@
     "ospitiTot": 6,
     "bedroom": 1,
     "bed": 3,
+    "titlePage": "Villa in montagna con vista panoramica",
     "isStarred": false,
     "infoLocation": [
       {
@@ -375,6 +381,7 @@
     "ospitiTot": 2,
     "bedroom": 1,
     "bed": 1,
+    "titlePage": "Grotta in montagna con vista panoramica",
     "isStarred": false,
     "infoLocation": [
       {

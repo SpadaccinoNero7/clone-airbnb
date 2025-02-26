@@ -5,6 +5,8 @@ import NotFound from "../../notFound/notFound";
 import BookingCard from "../bookingCard/BookingCard";
 import StarIcon from "@mui/icons-material/Star";
 import SearchBarCompatta from "../../searchbar/SearchBarCompatta";
+import IosShareIcon from "@mui/icons-material/IosShare";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 export default function SingleCard() {
   const params = useParams();
@@ -35,6 +37,17 @@ export default function SingleCard() {
         <>
           <div className={`${styles.singleCard}`}>
             <SearchBarCompatta />
+            <div className={styles.titlePage}>
+              <h1>{card.titlePage}</h1>
+              <div className={styles.titlePageIcons}>
+                <p>
+                  <IosShareIcon fontSize="small" /> condividi
+                </p>
+                <p>
+                  <FavoriteBorderIcon fontSize="small" /> salva
+                </p>
+              </div>
+            </div>
             <div className={`${styles.images}`}>
               <img src={card.img.first} className={`${styles.newImg}`} />
               <img src={card.img.second} className={`${styles.newImg}`} />
