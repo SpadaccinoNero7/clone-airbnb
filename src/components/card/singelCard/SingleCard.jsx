@@ -27,6 +27,8 @@ export default function SingleCard() {
     return stars;
   };
 
+  console.log(card.infoLocation);
+
   return (
     <>
       {!card ? (
@@ -76,6 +78,16 @@ export default function SingleCard() {
                     da host
                   </p>
                   <hr />
+                </div>
+                <div className={styles.particularity}>
+                  {card.infoLocation.map((i) => {
+                    return (
+                      <div key={i.id}>
+                        <h4>{i.title}</h4>
+                        <p>{i.description}</p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
               <div className={styles.spacingDiv}></div>

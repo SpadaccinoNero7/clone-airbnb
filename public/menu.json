@@ -28,6 +28,22 @@
     "bedroom": 1,
     "bed": 4,
     "isStarred": false,
+    "infoLocation": [
+      {
+        "first": {
+          "title": "Self check-in",
+          "description": "Esegui autonomamente il check-in utilizzando la cassetta di sicurezza."
+        },
+        "second": {
+          "title": "Splendida zona",
+          "description": "Gli ospiti amano la posizione pittoresca di questo alloggio"
+        },
+        "third": {
+          "title": "Cancellazione gratuita entro 24 ore",
+          "description": "Se dovessi cambiare idea, riceverai un rimborso totale"
+        }
+      }
+    ],
     "img": {
       "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
       "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
@@ -63,6 +79,20 @@
     "bedroom": 1,
     "bed": 1,
     "isStarred": false,
+    "infoLocation": {
+      "first": {
+        "title": "",
+        "description": ""
+      },
+      "second": {
+        "title": "",
+        "description": ""
+      },
+      "third": {
+        "title": "",
+        "description": ""
+      }
+    },
     "img": {
       "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
       "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
@@ -98,6 +128,20 @@
     "bedroom": 1,
     "bed": 2,
     "isStarred": false,
+    "infoLocation": {
+      "first": {
+        "title": "",
+        "description": ""
+      },
+      "second": {
+        "title": "",
+        "description": ""
+      },
+      "third": {
+        "title": "",
+        "description": ""
+      }
+    },
     "img": {
       "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
       "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
@@ -133,6 +177,20 @@
     "bedroom": 4,
     "bed": 5,
     "isStarred": false,
+    "infoLocation": {
+      "first": {
+        "title": "",
+        "description": ""
+      },
+      "second": {
+        "title": "",
+        "description": ""
+      },
+      "third": {
+        "title": "",
+        "description": ""
+      }
+    },
     "img": {
       "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
       "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
@@ -168,6 +226,20 @@
     "bedroom": 1,
     "bed": 1,
     "isStarred": false,
+    "infoLocation": {
+      "first": {
+        "title": "",
+        "description": ""
+      },
+      "second": {
+        "title": "",
+        "description": ""
+      },
+      "third": {
+        "title": "",
+        "description": ""
+      }
+    },
     "img": {
       "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
       "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
@@ -203,6 +275,20 @@
     "bedroom": 1,
     "bed": 3,
     "isStarred": false,
+    "infoLocation": {
+      "first": {
+        "title": "",
+        "description": ""
+      },
+      "second": {
+        "title": "",
+        "description": ""
+      },
+      "third": {
+        "title": "",
+        "description": ""
+      }
+    },
     "img": {
       "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
       "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
@@ -238,6 +324,20 @@
     "bedroom": 1,
     "bed": 1,
     "isStarred": false,
+    "infoLocation": {
+      "first": {
+        "title": "",
+        "description": ""
+      },
+      "second": {
+        "title": "",
+        "description": ""
+      },
+      "third": {
+        "title": "",
+        "description": ""
+      }
+    },
     "img": {
       "first": "https://www.educolor.it/img/thumbnails/0/immagine-casa-13730.jpg",
       "second": "https://static.vecteezy.com/system/resources/previews/006/555/674/non_2x/cartoon-doodle-linear-house-building-isolated-on-white-background-vector.jpg",
