@@ -3,8 +3,8 @@
 
 .header {
     display: grid;
-    grid-template-columns: 1% 5% 1fr 10% 10% 0.75fr 9% 7% 1%;
-    grid-template-areas: ". logo . soggiorni esperienze . affittaconairbnb altro .";
+    grid-template-columns: 5% 1fr 10% 10% 0.50fr 20%;
+    grid-template-areas: "logo . soggiorni esperienze . affittaconairbnb";
     align-items: center;
     justify-items: center;
 }
@@ -28,18 +28,9 @@
 
 .affittaconairbnb {
     grid-area: affittaconairbnb;
+    width: 100%;
     display: flex;
     align-items: center;
-}
-
-.affittaconairbnb img {
-    @include mixins.sizeImg($height: 20px, $width: 20px);
-    margin-left: 10px;
-}
-
-.altra-roba {
-    display: flex;
-    grid-area: altro;
 }
 
 .altra-roba:hover {
