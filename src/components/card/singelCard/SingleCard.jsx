@@ -7,6 +7,7 @@ import StarIcon from "@mui/icons-material/Star";
 import SearchBarCompatta from "../../searchbar/SearchBarCompatta";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import RatingCard from "./RatingCard";
 
 export default function SingleCard() {
   const params = useParams();
@@ -122,6 +123,7 @@ export default function SingleCard() {
               </div>
             </div>
           </div>
+          <RatingCard />
         </>
       )}
     </>
