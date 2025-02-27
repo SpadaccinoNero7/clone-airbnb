@@ -119,7 +119,7 @@ export default function SingleCard() {
               </div>
               <div className={styles.spacingDiv}></div>
               <div className={styles.bookingCard}>
-                <BookingCard />
+                <BookingCard card={card} />
               </div>
             </div>
           </div>

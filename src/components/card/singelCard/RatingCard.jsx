@@ -4,8 +4,7 @@ import { useLocalStorage } from "../../../customHook/useLocalStorage";
 import ReactStarsRating from "react-awesome-stars-rating";
 
 export default function RatingCard({ card }) {
-  console.log(card);
-  const [rating, setRating] = useLocalStorage(`RATING ${card.id}`, 0);
+  const [rating, setRating] = useLocalStorage(`RATING CardId ${card.id}`, 0);
 
   const handleRating = (value) => {
     setRating(value);

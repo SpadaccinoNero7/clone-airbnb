@@ -1,16 +1,6 @@
-import { useParams } from "react-router-dom";
-import { useFetch } from "../../../customHook/useFetch";
 import styles from "./bookingCard.module.scss";
 
-export default function BookingCard() {
-  const { data, loading, error } = useFetch("/menu.json");
-  const params = useParams();
-
-  const card = data.find(({ id }) => id === Number(params.cardId));
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
+export default function BookingCard({ card }) {
   const checkinDate = `${String(card.date.year)}-${String(
     card.date.monthDigit
   ).padStart(2, "0")}-${String(card.date.checkin_date).padStart(2, "0")}`;
