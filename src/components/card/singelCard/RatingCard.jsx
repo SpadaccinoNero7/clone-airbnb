@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
 import { Rating } from "react-simple-star-rating";
+import StarRatings from "react-star-ratings";
 import { useLocalStorage } from "../../../customHook/useLocalStorage";
+import ReactStarsRating from "react-awesome-stars-rating";
 
-export default function RatingCard() {
-  const [rating, setRating] = useLocalStorage("KEY", 0);
+export default function RatingCard({ card }) {
+  console.log(card);
+  const [rating, setRating] = useLocalStorage(`RATING ${card.id}`, 0);
 
   const handleRating = (value) => {
     setRating(value);
@@ -13,14 +15,24 @@ export default function RatingCard() {
     setRating(0);
   };
 
-  /*   useEffect(() => {
-    localStorage.setItem("KEY", JSON.stringify(rating));
-  }, [rating]); */
-
   return (
     <>
-      <Rating onClick={handleRating} initialValue={rating} />
+      <Rating onClick={handleRating} initialValue={rating} fillColor="red" />
       <button onClick={handleReset}>Reset</button>
+      <StarRatings
+        rating={rating}
+        numberOfStars={5}
+        starRatedColor="blue"
+        changeRating={handleRating}
+        starDimension="20px"
+      />
+      <ReactStarsRating
+        value={rating}
+        onChange={handleRating}
+        primaryColor="gold"
+        secondaryColor="gray"
+        starGap={5}
+      />
     </>
   );
 }

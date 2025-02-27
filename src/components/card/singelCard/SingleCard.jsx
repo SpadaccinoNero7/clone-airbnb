@@ -123,7 +123,7 @@ export default function SingleCard() {
               </div>
             </div>
           </div>
-          <RatingCard />
+          <RatingCard card={card} />
         </>
       )}
     </>
