@@ -9,6 +9,7 @@ import IosShareIcon from "@mui/icons-material/IosShare";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import RatingCard from "./RatingCard";
 import ReactStarsRating from "react-awesome-stars-rating";
+import { useReviews } from "../../../customHook/useLocalStorage";
 
 export default function SingleCard() {
   const params = useParams();
@@ -20,7 +21,7 @@ export default function SingleCard() {
 
   const card = data.find(({ id }) => id === Number(params.cardId));
 
-  const rating = localStorage.getItem(`InfoCard ${card.id}`);
+  const { averageRating } = useReviews(card.id);
 
   /*   const countStar = () => {
     const rating = card.rating;
@@ -92,11 +93,11 @@ export default function SingleCard() {
                 <div className={styles.rating}>
                   <h3>Amato dagli ospiti</h3>
                   <div>
-                    <h3>{rating}</h3>
+                    <h3>a</h3>
                     <p>
                       <ReactStarsRating
                         isEdit={false}
-                        value={rating}
+                        value={card.rating}
                         primaryColor="gold"
                         secondaryColor="gray"
                         starGap={5}

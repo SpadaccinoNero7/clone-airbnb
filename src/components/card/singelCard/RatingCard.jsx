@@ -1,17 +1,21 @@
 import { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 import StarRatings from "react-star-ratings";
-import { useLocalStorage } from "../../../customHook/useLocalStorage";
+import { useReviews } from "../../../customHook/useLocalStorage";
 import ReactStarsRating from "react-awesome-stars-rating";
 
 export default function RatingCard({ card }) {
-  const [rating, setRating] = useLocalStorage(`InfoCard ${card.id}`);
-  const [reviews, setReviews] = useState(0);
-  const [reviewsId, setReviewsId] = useState(0);
+  const { rating, reviews, setRating, addReview, averageRating } = useReviews(
+    card.id
+  );
 
   const handleRating = (value) => {
     setRating(value);
   };
+
+  /*   const [reviews, setReviews] = useState(0);
+  const [reviewsId, setReviewsId] = useState(0);
+
 
   const handleButtonClick = () => {
     setReviews(reviews + 1);
@@ -35,9 +39,7 @@ export default function RatingCard({ card }) {
   const existingReviews =
     JSON.parse(localStorage.getItem(`testObject ${card.id}`)) || [];
 
-  const sumReviews = existingReviews
-    .map(({ reviews }) => reviews)
-    .reduce((acc, curr) => acc + curr, 0);
+  const sumReviews = existingReviews.length;
 
   const sumRatings = existingReviews.map(({ rating }) => rating);
 
@@ -46,7 +48,7 @@ export default function RatingCard({ card }) {
       ? (
           sumRatings.reduce((acc, curr) => acc + curr, 0) / sumRatings.length
         ).toFixed(2)
-      : 0;
+      : 0; */
 
   return (
     <>
@@ -57,15 +59,30 @@ export default function RatingCard({ card }) {
         secondaryColor="gray"
         starGap={5}
       />
-      <button onClick={handleButtonClick}>click</button>
+      {/* <button onClick={handleButtonClick}>click</button> */}
       {/*       {existingReviews.map(({ reviewId, rating, reviews }) => (
         <div key={reviewId}>
           <p>Rating: {rating}</p>
           <p>Reviews: {reviews}</p>
         </div>
       ))} */}
-      <p>Average rating: {avgRating}</p>
-      <p>Total reviews: {sumReviews}</p>
+      {/*       <p>Average rating: {avgRating}</p>
+      <p>Total reviews: {sumReviews}</p> */}
+      {/* Bottone per aggiungere una recensione */}
+      <button onClick={addReview}>Aggiungi recensione</button>
+
+      {/* Visualizza la valutazione media */}
+      <p>Valutazione media: {averageRating}</p>
+
+      {/* Elenco delle recensioni */}
+      <p>Recensioni totali: {reviews.length}</p>
+      {reviews.map(({ reviewId, rating }) => (
+        <div key={reviewId}>
+          <p>
+            Recensione #{reviewId}: {rating} stelle
+          </p>
+        </div>
+      ))}
     </>
   );
 }
