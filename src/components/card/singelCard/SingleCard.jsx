@@ -16,32 +16,14 @@ export default function SingleCard() {
 
   const { data, loading, error } = useFetch("/menu.json");
 
+  // Ensure useReviews is called unconditionally
+  const cardId = data ? Number(params.cardId) : null;
+  const { reviews, averageRating } = useReviews(cardId);
+
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  const card = data.find(({ id }) => id === Number(params.cardId));
-
-  const { averageRating } = useReviews(card.id);
-
-  /*   const countStar = () => {
-    const rating = card.rating;
-    let stars = [];
-
-    for (let i = 0; i < rating; i++) {
-      stars.push(
-        <ReactStarsRating
-          value={rating}
-          primaryColor="gold"
-          secondaryColor="gray"
-          starGap={5}
-          key={i}
-        />
-      );
-    }
-
-    return stars;
-  }; */
-
+  const card = data.find(({ id }) => id === cardId);
   return (
     <>
       {!card ? (
@@ -93,11 +75,11 @@ export default function SingleCard() {
                 <div className={styles.rating}>
                   <h3>Amato dagli ospiti</h3>
                   <div>
-                    <h3>a</h3>
+                    <h3>{averageRating}</h3>
                     <p>
                       <ReactStarsRating
                         isEdit={false}
-                        value={card.rating}
+                        value={averageRating}
                         primaryColor="gold"
                         secondaryColor="gray"
                         starGap={5}
@@ -105,7 +87,7 @@ export default function SingleCard() {
                     </p>
                   </div>
                   <div className={styles.recensioni}>
-                    {card.reviews}
+                    {reviews.length}
                     <p>recensioni</p>
                   </div>
                 </div>
