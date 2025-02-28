@@ -11,11 +11,10 @@ export default function BookingCard({ card }) {
   function handleMolt(num1, num2) {
     return num1 * num2;
   }
-
-  const firstNum = card.price.perNight;
   const totalDays = card.date.checkout_date - card.date.checkin_date;
+
   const totalPrice =
-    handleMolt(firstNum, totalDays) +
+    handleMolt(card.price.perNight, totalDays) +
     card.price.cleaning +
     card.price.airbnbService +
     card.price.taxes;
@@ -51,7 +50,7 @@ export default function BookingCard({ card }) {
             <p>
               {card.price.perNight} € x {totalDays} notti
             </p>
-            <p>{handleMolt(firstNum, totalDays)} €</p>
+            <p>{handleMolt(card.price.perNight, totalDays)} €</p>
           </div>
           <div className={styles.priceCleaning}>
             <p>Costi di pulizia</p>

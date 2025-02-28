@@ -8,6 +8,7 @@ import SearchBarCompatta from "../../searchbar/SearchBarCompatta";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import RatingCard from "./RatingCard";
+import ReactStarsRating from "react-awesome-stars-rating";
 
 export default function SingleCard() {
   const params = useParams();
@@ -19,16 +20,26 @@ export default function SingleCard() {
 
   const card = data.find(({ id }) => id === Number(params.cardId));
 
-  const countStar = () => {
+  const rating = localStorage.getItem(`InfoCard ${card.id}`);
+
+  /*   const countStar = () => {
     const rating = card.rating;
     let stars = [];
 
     for (let i = 0; i < rating; i++) {
-      stars.push(<StarIcon fontSize="small" key={i} />);
+      stars.push(
+        <ReactStarsRating
+          value={rating}
+          primaryColor="gold"
+          secondaryColor="gray"
+          starGap={5}
+          key={i}
+        />
+      );
     }
 
     return stars;
-  };
+  }; */
 
   return (
     <>
@@ -81,8 +92,16 @@ export default function SingleCard() {
                 <div className={styles.rating}>
                   <h3>Amato dagli ospiti</h3>
                   <div>
-                    <h3>{card.rating}</h3>
-                    <p>{countStar()}</p>
+                    <h3>{rating}</h3>
+                    <p>
+                      <ReactStarsRating
+                        isEdit={false}
+                        value={rating}
+                        primaryColor="gold"
+                        secondaryColor="gray"
+                        starGap={5}
+                      />
+                    </p>
                   </div>
                   <div className={styles.recensioni}>
                     {card.reviews}
