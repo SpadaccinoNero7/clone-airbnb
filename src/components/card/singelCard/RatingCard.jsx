@@ -1,8 +1,5 @@
-import { useState } from "react";
-import { Rating } from "react-simple-star-rating";
-import StarRatings from "react-star-ratings";
 import { useReviews } from "../../../customHook/useLocalStorage";
-import ReactStarsRating from "react-awesome-stars-rating";
+import { Rating } from "react-simple-star-rating";
 import styles from "./ratingCard.module.scss";
 
 export default function RatingCard({ card }) {
@@ -54,12 +51,11 @@ export default function RatingCard({ card }) {
   return (
     <div className={styles.ratingCard}>
       <div className={styles.stars}>
-        <ReactStarsRating
-          value={rating}
-          onChange={handleRating}
-          primaryColor="gold"
-          secondaryColor="gray"
-          starGap={5}
+        <Rating
+          allowFraction
+          transition
+          titleSeparator="su"
+          onClick={handleRating}
         />
       </div>
       <div className={styles.addReview}>
@@ -69,25 +65,6 @@ export default function RatingCard({ card }) {
         <p>Valutazione media: {averageRating}</p>
         <p>Recensioni totali: {reviews.length}</p>
       </div>
-      {/* {reviews.map(({ reviewId, rating }) => (
-        <div key={reviewId}>
-          <p>
-            Recensione #{reviewId}: {rating} stelle
-          </p>
-        </div>
-      ))} */}
     </div>
   );
-}
-
-{
-  /*       <Rating onClick={handleRating} initialValue={rating} fillColor="red" />
-<button onClick={handleReset}>Reset</button>
-<StarRatings
-  rating={rating}
-  numberOfStars={5}
-  starRatedColor="blue"
-  changeRating={handleRating}
-  starDimension="20px"
-/> */
 }

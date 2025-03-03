@@ -3,13 +3,12 @@ import { useFetch } from "../../../customHook/useFetch";
 import styles from "./singleCard.module.scss";
 import NotFound from "../../notFound/notFound";
 import BookingCard from "../bookingCard/BookingCard";
-import StarIcon from "@mui/icons-material/Star";
 import SearchBarCompatta from "../../searchbar/SearchBarCompatta";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import RatingCard from "./RatingCard";
-import ReactStarsRating from "react-awesome-stars-rating";
 import { useReviews } from "../../../customHook/useLocalStorage";
+import { Rating } from "react-simple-star-rating";
 
 export default function SingleCard() {
   const params = useParams();
@@ -24,6 +23,7 @@ export default function SingleCard() {
   if (error) return <div>Error: {error}</div>;
 
   const card = data.find(({ id }) => id === cardId);
+
   return (
     <>
       {!card ? (
@@ -50,11 +50,7 @@ export default function SingleCard() {
                 const { img } = item[key]; // accediamo a "title" e "description"
 
                 return (
-                  <img
-                    key={index}
-                    src={img}
-                    className={`${styles.newImg}`}
-                  ></img>
+                  <img key={index} src={img} className={styles.newImg}></img>
                 );
               })}
             </div>
@@ -76,15 +72,12 @@ export default function SingleCard() {
                   <h3>Amato dagli ospiti</h3>
                   <div>
                     <h3>{averageRating}</h3>
-                    <p>
-                      <ReactStarsRating
-                        isEdit={false}
-                        value={averageRating}
-                        primaryColor="gold"
-                        secondaryColor="gray"
-                        starGap={5}
-                      />
-                    </p>
+                    <Rating
+                      allowFraction
+                      titleSeparator="su"
+                      initialValue={averageRating}
+                      readonly
+                    />
                   </div>
                   <div className={styles.recensioni}>
                     {reviews.length}
@@ -124,7 +117,7 @@ export default function SingleCard() {
                 <div className={styles.bookingCard}>
                   <BookingCard card={card} />
                 </div>
-                <div>
+                <div className={styles.ratingCard}>
                   <RatingCard card={card} />
                 </div>
               </div>
