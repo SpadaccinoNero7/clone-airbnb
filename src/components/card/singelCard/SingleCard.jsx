@@ -124,7 +124,9 @@ export default function SingleCard() {
                 <div className={styles.bookingCard}>
                   <BookingCard card={card} />
                 </div>
-                <RatingCard card={card} />
+                <div>
+                  <RatingCard card={card} />
+                </div>
               </div>
             </div>
           </div>

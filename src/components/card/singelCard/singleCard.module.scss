@@ -30,7 +30,7 @@
 }
 
 .spacingDiv {
-    width: 40%
+    width: 30%
 }
 
 .recensioni {
@@ -67,4 +67,10 @@
 .bookingCard {
     display: flex;
     justify-content: center;
+}
+
+.bookAndReviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

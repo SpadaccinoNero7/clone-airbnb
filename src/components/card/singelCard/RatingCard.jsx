@@ -3,6 +3,7 @@ import { Rating } from "react-simple-star-rating";
 import StarRatings from "react-star-ratings";
 import { useReviews } from "../../../customHook/useLocalStorage";
 import ReactStarsRating from "react-awesome-stars-rating";
+import styles from "./ratingCard.module.scss";
 
 export default function RatingCard({ card }) {
   const { rating, reviews, setRating, addReview, averageRating } = useReviews(
@@ -51,39 +52,31 @@ export default function RatingCard({ card }) {
       : 0; */
 
   return (
-    <>
-      <ReactStarsRating
-        value={rating}
-        onChange={handleRating}
-        primaryColor="gold"
-        secondaryColor="gray"
-        starGap={5}
-      />
-      {/* <button onClick={handleButtonClick}>click</button> */}
-      {/*       {existingReviews.map(({ reviewId, rating, reviews }) => (
-        <div key={reviewId}>
-          <p>Rating: {rating}</p>
-          <p>Reviews: {reviews}</p>
-        </div>
-      ))} */}
-      {/*       <p>Average rating: {avgRating}</p>
-      <p>Total reviews: {sumReviews}</p> */}
-      {/* Bottone per aggiungere una recensione */}
-      <button onClick={addReview}>Aggiungi recensione</button>
-
-      {/* Visualizza la valutazione media */}
-      <p>Valutazione media: {averageRating}</p>
-
-      {/* Elenco delle recensioni */}
-      <p>Recensioni totali: {reviews.length}</p>
-      {reviews.map(({ reviewId, rating }) => (
+    <div className={styles.ratingCard}>
+      <div className={styles.stars}>
+        <ReactStarsRating
+          value={rating}
+          onChange={handleRating}
+          primaryColor="gold"
+          secondaryColor="gray"
+          starGap={5}
+        />
+      </div>
+      <div className={styles.addReview}>
+        <button onClick={addReview}>Aggiungi recensione</button>
+      </div>
+      <div className={styles.info}>
+        <p>Valutazione media: {averageRating}</p>
+        <p>Recensioni totali: {reviews.length}</p>
+      </div>
+      {/* {reviews.map(({ reviewId, rating }) => (
         <div key={reviewId}>
           <p>
             Recensione #{reviewId}: {rating} stelle
           </p>
         </div>
-      ))}
-    </>
+      ))} */}
+    </div>
   );
 }
 
