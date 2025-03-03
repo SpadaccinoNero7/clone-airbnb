@@ -120,12 +120,14 @@ export default function SingleCard() {
                 <hr />
               </div>
               <div className={styles.spacingDiv}></div>
-              <div className={styles.bookingCard}>
-                <BookingCard card={card} />
+              <div className={styles.bookAndReviews}>
+                <div className={styles.bookingCard}>
+                  <BookingCard card={card} />
+                </div>
+                <RatingCard card={card} />
               </div>
             </div>
           </div>
-          <RatingCard card={card} />
         </>
       )}
     </>
