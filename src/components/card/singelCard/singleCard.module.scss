@@ -1,3 +1,5 @@
+$top: 0;
+
 .images {
     display: flex;
     justify-content: space-between;
@@ -86,6 +88,6 @@
 .bookAndReviews {
     display: flex;
     flex-direction: column;
-    height: 300vh;
+    height: 180vh;
     border: 1px solid black;
 }

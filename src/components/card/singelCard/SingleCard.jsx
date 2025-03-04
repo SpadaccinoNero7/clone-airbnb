@@ -24,6 +24,21 @@ export default function SingleCard() {
 
   const card = data.find(({ id }) => id === cardId);
 
+  const totalDays = card.date.checkout_date - card.date.checkin_date;
+
+  const checkinDate = `${String(card.date.checkin_date).padStart(
+    2,
+    "0"
+  )}-${String(card.date.monthDigit).padStart(2, "0")}-${String(
+    card.date.year
+  )}`;
+  const checkoutDate = `${String(card.date.checkout_date).padStart(
+    2,
+    "0"
+  )}-${String(card.date.monthDigit).padStart(2, "0")}-${String(
+    card.date.year
+  )}`;
+
   return (
     <>
       {!card ? (
@@ -172,6 +187,23 @@ export default function SingleCard() {
                     </div>
                   </div>
                   <hr />
+                </div>
+                <div className={styles.finalDate}>
+                  <h3>
+                    {totalDays} notti a {card.location}
+                  </h3>
+                  <p>
+                    {checkinDate} - {checkoutDate}
+                  </p>
+                </div>
+                <div>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+                  aperiam aliquam ab ex corporis aut possimus, numquam qui quas
+                  officiis illum voluptatibus hic magnam velit autem quaerat
+                  harum in tempora. Rerum tempore nisi facilis libero beatae
+                  eaque voluptate eum? Accusantium sint ab qui velit optio
+                  incidunt provident suscipit amet quam quis eum eius voluptas
+                  hic, fuga inventore cum? Quam, obcaecati.
                 </div>
               </div>
               <div className={styles.bookAndReviews}>
