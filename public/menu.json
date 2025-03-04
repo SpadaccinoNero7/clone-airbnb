@@ -27,8 +27,13 @@
     "ospitiTot": 7,
     "bedroom": 1,
     "bed": 4,
+    "descriptionUnderInfoLocation": "Se la vista, il lusso e il fascino romantico sono la tua passione, siamo qui per aiutarti! Coccole al Riverstone House Portfolio è il nostro rifugio per coppie di lusso. Gli ospiti hanno l'uso esclusivo del Pod. La fattoria è disponibile per l'esplorazione e la diga per nuotare",
     "titlePage": "Baita in montagna con vista panoramica",
     "isStarred": false,
+    "bedImages": {
+      "1": "https://www.bing.com/th?id=OIP.zwoNWQMwt-lTuhNKzy41AwHaE7&w=263&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "2": "https://th.bing.com/th/id/OIP.RGUxq2Z6WihKmkQ4jA0a2AAAAA?rs=1&pid=ImgDetMain"
+    },
     "infoLocation": [
       {
         "id": 1,
@@ -104,8 +109,13 @@
     "ospitiTot": 2,
     "bedroom": 1,
     "bed": 1,
+    "descriptionUnderInfoLocation": "Se la vista, il lusso e il fascino romantico sono la tua passione, siamo qui per aiutarti! Coccole al Riverstone House Portfolio è il nostro rifugio per coppie di lusso. Gli ospiti hanno l'uso esclusivo del Pod. La fattoria è disponibile per l'esplorazione e la diga per nuotare",
     "titlePage": "Trullo con vista panoramica",
     "isStarred": false,
+    "bedImages": {
+      "1": "https://www.bing.com/th?id=OIP.zwoNWQMwt-lTuhNKzy41AwHaE7&w=263&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "2": "https://th.bing.com/th/id/OIP.RGUxq2Z6WihKmkQ4jA0a2AAAAA?rs=1&pid=ImgDetMain"
+    },
     "infoLocation": [
       {
         "id": 1,
@@ -181,8 +191,13 @@
     "ospitiTot": 5,
     "bedroom": 1,
     "bed": 2,
+    "descriptionUnderInfoLocation": "Se la vista, il lusso e il fascino romantico sono la tua passione, siamo qui per aiutarti! Coccole al Riverstone House Portfolio è il nostro rifugio per coppie di lusso. Gli ospiti hanno l'uso esclusivo del Pod. La fattoria è disponibile per l'esplorazione e la diga per nuotare",
     "titlePage": "Iurta in montagna con vista panoramica",
     "isStarred": false,
+    "bedImages": {
+      "1": "https://www.bing.com/th?id=OIP.zwoNWQMwt-lTuhNKzy41AwHaE7&w=263&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "2": "https://th.bing.com/th/id/OIP.RGUxq2Z6WihKmkQ4jA0a2AAAAA?rs=1&pid=ImgDetMain"
+    },
     "infoLocation": [
       {
         "id": 1,
@@ -258,8 +273,13 @@
     "ospitiTot": 9,
     "bedroom": 4,
     "bed": 5,
+    "descriptionUnderInfoLocation": "Se la vista, il lusso e il fascino romantico sono la tua passione, siamo qui per aiutarti! Coccole al Riverstone House Portfolio è il nostro rifugio per coppie di lusso. Gli ospiti hanno l'uso esclusivo del Pod. La fattoria è disponibile per l'esplorazione e la diga per nuotare",
     "titlePage": "Castello in montagna con vista panoramica",
     "isStarred": false,
+    "bedImages": {
+      "1": "https://www.bing.com/th?id=OIP.zwoNWQMwt-lTuhNKzy41AwHaE7&w=263&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "2": "https://th.bing.com/th/id/OIP.RGUxq2Z6WihKmkQ4jA0a2AAAAA?rs=1&pid=ImgDetMain"
+    },
     "infoLocation": [
       {
         "id": 1,
@@ -335,8 +355,13 @@
     "ospitiTot": 3,
     "bedroom": 1,
     "bed": 1,
+    "descriptionUnderInfoLocation": "Se la vista, il lusso e il fascino romantico sono la tua passione, siamo qui per aiutarti! Coccole al Riverstone House Portfolio è il nostro rifugio per coppie di lusso. Gli ospiti hanno l'uso esclusivo del Pod. La fattoria è disponibile per l'esplorazione e la diga per nuotare",
     "titlePage": "Cupola in montagna con vista panoramica",
     "isStarred": false,
+    "bedImages": {
+      "1": "https://www.bing.com/th?id=OIP.zwoNWQMwt-lTuhNKzy41AwHaE7&w=263&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "2": "https://th.bing.com/th/id/OIP.RGUxq2Z6WihKmkQ4jA0a2AAAAA?rs=1&pid=ImgDetMain"
+    },
     "infoLocation": [
       {
         "id": 1,
@@ -412,8 +437,13 @@
     "ospitiTot": 6,
     "bedroom": 1,
     "bed": 3,
+    "descriptionUnderInfoLocation": "Se la vista, il lusso e il fascino romantico sono la tua passione, siamo qui per aiutarti! Coccole al Riverstone House Portfolio è il nostro rifugio per coppie di lusso. Gli ospiti hanno l'uso esclusivo del Pod. La fattoria è disponibile per l'esplorazione e la diga per nuotare",
     "titlePage": "Villa in montagna con vista panoramica",
     "isStarred": false,
+    "bedImages": {
+      "1": "https://www.bing.com/th?id=OIP.zwoNWQMwt-lTuhNKzy41AwHaE7&w=263&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "2": "https://th.bing.com/th/id/OIP.RGUxq2Z6WihKmkQ4jA0a2AAAAA?rs=1&pid=ImgDetMain"
+    },
     "infoLocation": [
       {
         "id": 1,
@@ -489,8 +519,13 @@
     "ospitiTot": 2,
     "bedroom": 1,
     "bed": 1,
+    "descriptionUnderInfoLocation": "Se la vista, il lusso e il fascino romantico sono la tua passione, siamo qui per aiutarti! Coccole al Riverstone House Portfolio è il nostro rifugio per coppie di lusso. Gli ospiti hanno l'uso esclusivo del Pod. La fattoria è disponibile per l'esplorazione e la diga per nuotare",
     "titlePage": "Grotta in montagna con vista panoramica",
     "isStarred": false,
+    "bedImages": {
+      "1": "https://www.bing.com/th?id=OIP.zwoNWQMwt-lTuhNKzy41AwHaE7&w=263&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+      "2": "https://th.bing.com/th/id/OIP.RGUxq2Z6WihKmkQ4jA0a2AAAAA?rs=1&pid=ImgDetMain"
+    },
     "infoLocation": [
       {
         "id": 1,

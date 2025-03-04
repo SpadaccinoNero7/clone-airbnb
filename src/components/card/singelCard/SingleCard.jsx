@@ -109,10 +109,71 @@ export default function SingleCard() {
                       </div>
                     );
                   })}
+                  <hr />
                 </div>
-                <hr />
+                <div className={styles.descriptionUnderInfoLocation}>
+                  {card.descriptionUnderInfoLocation}
+                  <hr />
+                </div>
+                <div className={styles.textUnderUnder}>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Perspiciatis ab inventore quasi necessitatibus dicta
+                  repellendus porro suscipit qui laboriosam quam, voluptate
+                  ducimus tempore iusto, neque ipsa magni aut eius tenetur!
+                  Molestiae quas ipsa laudantium deserunt suscipit ea voluptatem
+                  at voluptas magnam qui voluptatum eius temporibus ducimus,
+                  deleniti eaque optio quaerat vero eligendi iste mollitia
+                  molestias impedit. Autem, ut dolor? Ut. Ducimus consequuntur
+                  delectus soluta accusantium laudantium quidem laborum
+                  voluptates molestiae aliquam at nobis provident saepe fugit,
+                  consequatur incidunt veniam omnis reiciendis similique!
+                  Doloribus eius aliquam praesentium. Non iusto tempore at?
+                  Exercitationem consequatur obcaecati nisi quo doloribus atque
+                  fugit? Explicabo, voluptatem? Recusandae necessitatibus
+                  tenetur earum laborum voluptatem commodi aliquid accusamus
+                  facilis! Culpa impedit suscipit enim eos? Saepe nisi quas nemo
+                  suscipit? Animi, laudantium eius ad vel consectetur quos!
+                  Maiores quos dicta quis repellendus pariatur, iusto ratione
+                  nisi eveniet. Natus iure, modi soluta consequuntur provident
+                  illum architecto nemo veritatis optio amet voluptatum?
+                  <hr />
+                </div>
+                <div className={styles.doveDormirai}>
+                  <h3>Dove dormirai</h3>
+                  <div className={styles.doveDormiraiFoto}>
+                    {Object.keys(card.bedImages).map((key) => {
+                      const img = card.bedImages[key];
+                      return (
+                        <img
+                          key={key}
+                          src={img}
+                          alt={`Bed image ${key}`}
+                          className={styles.newImg}
+                        />
+                      );
+                    })}
+                    <hr />
+                  </div>
+                </div>
+                <div className={styles.cosaTroverai}>
+                  <h2>Cosa troverai</h2>
+                  <div className={styles.cosaTroveraiIcons}>
+                    <div className={styles.cosaTroveraiLeft}>
+                      <p>Vista sul lago</p>
+                      <p>Lungomare</p>
+                      <p>Wi-fi</p>
+                      <p>Parcheggio gratuito nella proprietà</p>
+                    </div>
+                    <div className={styles.cosaTroveraiRight}>
+                      <p>Vista sulle montagne</p>
+                      <p>Cucina</p>
+                      <p>Spazio di lavoro dedicato</p>
+                      <p>Animali domestici ammessi</p>
+                    </div>
+                  </div>
+                  <hr />
+                </div>
               </div>
-              <div className={styles.spacingDiv}></div>
               <div className={styles.bookAndReviews}>
                 <div className={styles.bookingCard}>
                   <BookingCard card={card} />
@@ -121,7 +182,8 @@ export default function SingleCard() {
                   <RatingCard card={card} />
                 </div>
               </div>
-            </div>
+            </div>{" "}
+            {/* titlepage */}
           </div>
         </>
       )}
