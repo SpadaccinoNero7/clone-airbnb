@@ -15,7 +15,6 @@ export default function SingleCard() {
 
   const { data, loading, error } = useFetch("/menu.json");
 
-  // Ensure useReviews is called unconditionally
   const cardId = data ? Number(params.cardId) : null;
   const { reviews, averageRating } = useReviews(cardId);
 
@@ -84,7 +83,13 @@ export default function SingleCard() {
                   </p>
                 </div>
                 <div className={styles.rating}>
-                  <h3>Amato dagli ospiti</h3>
+                  <h3>
+                    {averageRating == 0
+                      ? "Nessuna recensione"
+                      : "Apprezzato dagli ospiti"}
+                    {averageRating != 5 ? "Diverso da 5" : ""}
+                    {averageRating == 5 ? "Amato dagli ospiti" : ""}
+                  </h3>
                   <div>
                     <h3>{averageRating}</h3>
                     <Rating
@@ -214,8 +219,37 @@ export default function SingleCard() {
                   <RatingCard card={card} />
                 </div>
               </div>
-            </div>{" "}
-            {/* titlepage */}
+            </div>
+            <hr style={{ width: "100%" }} />
+            <div className={styles.ratingComplessivo}>
+              <h3>{averageRating}</h3>
+              {averageRating == 0
+                ? "Questo posto non ha ricevuto recensioni, lasciane una ora!"
+                : `Recensioni lasciate: ${reviews.length}`}
+
+              {averageRating >= 3 &&
+              averageRating != 0 &&
+              averageRating != 5 ? (
+                <p>Questo alloggio è apprezzato dalla clientela</p>
+              ) : (
+                ""
+              )}
+
+              {averageRating < 3 && averageRating != 0 ? (
+                <p>Recensioni basse, sconsigliato</p>
+              ) : (
+                ""
+              )}
+
+              {averageRating == 5 ? (
+                <p>
+                  Questo alloggio fa parte di un 5% di quelli più apprezzati in
+                  base a valutazioni, recensioni e affidabilità
+                </p>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
         </>
       )}

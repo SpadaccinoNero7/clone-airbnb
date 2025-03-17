@@ -3,9 +3,7 @@ import Header from "./header/Header";
 import SearchBar from "./searchbar/SearchBar";
 import NavbarTemporanea from "./navbarTemporanea/NavbarTemporanea";
 import Wrapper from "./wrapper/Wrapper";
-import ViewModeContextProvider, {
-  ViewModeContext,
-} from "../context/ViewModeContext";
+import ViewModeContextProvider from "../context/ViewModeContext";
 
 export default function HomePage() {
   return (
