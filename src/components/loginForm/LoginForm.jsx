@@ -3,8 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { useFetch } from "../../customHook/useFetch";
 import CardResidenze from "../card/cardRedisenze/CardResidenze";
 import { getUserEmail, getUserPassword } from "../../features/userSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -16,7 +18,7 @@ export default function LoginForm() {
 
   const users = useSelector((state) => state.users.users);
 
-  const user = users.find(
+  const utente = users.find(
     (user) => user.email === email && user.password === password
   );
 
@@ -63,14 +65,22 @@ export default function LoginForm() {
       <button type="submit" onClick={() => handleCheck()}>
         Login
       </button>
+      <button onClick={() => navigate("/firstsection")} disabled={!isLoggedIn}>
+        Pagina principale
+      </button>
       {isLoggedIn && (
         <div>
           <h1>Dettagli utente</h1>
-          <p>Nome: {user.name}</p>
+          <p>Nome: {utente.name}</p>
+          <p>Cognome: {utente.surname}</p>
+          <p>Età: {utente.age}</p>
+          <p>Professione: {utente.job}</p>
+          <p>Email: {utente.email}</p>
         </div>
       )}
       {isLoggedIn && (
         <div>
+          <h1>Residenze preferite</h1>
           {filterData.map((id) => (
             <CardResidenze key={id} card={data.find((el) => el.id === id)} />
           ))}
